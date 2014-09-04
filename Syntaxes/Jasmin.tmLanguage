@@ -131,9 +131,25 @@
 		<key>double-string</key>
 		<dict>
 			<key>begin</key>
-			<string>(?&lt;=")</string>
+			<string>"</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>string.begin.jasmin</string>
+				</dict>
+			</dict>
 			<key>end</key>
-			<string>(?=")</string>
+			<string>"</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>string.end.jasmin</string>
+				</dict>
+			</dict>
 			<key>patterns</key>
 			<array>
 				<dict>
