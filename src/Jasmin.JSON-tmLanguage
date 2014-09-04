@@ -114,13 +114,7 @@
       "match": "(?<=^|[\\s()=,])(?:(?:\\[+)?(?:L[/\\w_]+;|[BCDFIJSZV]))(?=$|[\\s,)=])"
     },
     "double-string": {
-      "comment": "double string definition",
-      "begin": "\"",
-      "beginCaptures": {
-        "0": {
-          "name": "string.begin.jasmin"
-        } 
-      },
+      "begin": "(?<=\")",
       "patterns": [
         {
           "name": "constant.character.escape.jasmin",
@@ -131,12 +125,7 @@
           "match":"."
         }
       ],
-      "end": "\"",
-      "endCaptures": {
-        "0": {
-          "name": "string.end.jasmin"
-        }
-      }
+      "end": "(?=\")"
     },
     "number": {
       "name": "constant.numeric.jasmin",
