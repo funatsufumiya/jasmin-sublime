@@ -102,7 +102,7 @@
       "end":"$",
       "patterns": [
         { "include": "#comment" },
-        { "include": "#directive" },
+        // { "include": "#directive" },
         {
           "comment": ".var <var-number> is <name> <descriptor> from <label1> to <label2>",
           "match": "(\\.var)\\s+([1-9][0-9]*|[0])\\s+(is)\\s+([\\w_]+)\\s+((?:\\[+)?(?:L[/\\w_]+;|[BCDFIJSZV]))\\s+(from)\\s+(?:[\\w_]+)\\s+(to)\\s+(?:[\\w_]+)",
