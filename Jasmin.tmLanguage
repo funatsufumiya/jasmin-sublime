@@ -36,6 +36,10 @@
 		</dict>
 		<dict>
 			<key>include</key>
+			<string>#var-def</string>
+		</dict>
+		<dict>
+			<key>include</key>
 			<string>#comment</string>
 		</dict>
 		<dict>
@@ -385,6 +389,68 @@
 			<string>(?&lt;=^|[\s()=,])(?:(?:\[+)?(?:L[/\w_]+;|[BCDFIJSZV]))(?=$|[\s,)=])</string>
 			<key>name</key>
 			<string>storage.type.type-descriptor.jasmin</string>
+		</dict>
+		<key>var-def</key>
+		<dict>
+			<key>begin</key>
+			<string>(?=\.var)</string>
+			<key>end</key>
+			<string>$</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#comment</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#directive</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.meta.directive.jasmin</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>constant.numeric.jasmin</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.meta.is.jasmin</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>variable.parameter.jasmin</string>
+						</dict>
+						<key>5</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.type-descriptor.jasmin</string>
+						</dict>
+						<key>6</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.meta.from.jasmin</string>
+						</dict>
+						<key>7</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.meta.to.jasmin</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>.var &lt;var-number&gt; is &lt;name&gt; &lt;descriptor&gt; from &lt;label1&gt; to &lt;label2&gt;</string>
+					<key>match</key>
+					<string>(\.var)\s+([1-9][0-9]*|[0])\s+(is)\s+([\w_]+)\s+((?:\[+)?(?:L[/\w_]+;|[BCDFIJSZV]))\s+(from)\s+(?:[\w_]+)\s+(to)\s+(?:[\w_]+)</string>
+				</dict>
+			</array>
 		</dict>
 	</dict>
 	<key>scopeName</key>

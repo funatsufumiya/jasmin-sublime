@@ -97,6 +97,27 @@
         }
       ]
     },
+    "var-def": {
+      "begin":"(?=\\.var)",
+      "end":"$",
+      "patterns": [
+        { "include": "#comment" },
+        { "include": "#directive" },
+        {
+          "comment": ".var <var-number> is <name> <descriptor> from <label1> to <label2>",
+          "match": "(\\.var)\\s+([1-9][0-9]*|[0])\\s+(is)\\s+([\\w_]+)\\s+((?:\\[+)?(?:L[/\\w_]+;|[BCDFIJSZV]))\\s+(from)\\s+(?:[\\w_]+)\\s+(to)\\s+(?:[\\w_]+)",
+          "captures": {
+            "1": { "name": "keyword.meta.directive.jasmin" },
+            "2": { "name": "constant.numeric.jasmin" },
+            "3": { "name": "keyword.meta.is.jasmin" },
+            "4": { "name": "variable.parameter.jasmin"},
+            "5": { "name": "storage.type.type-descriptor.jasmin"},
+            "6": { "name": "keyword.meta.from.jasmin" },
+            "7": { "name": "keyword.meta.to.jasmin" }
+          }
+        }
+      ]
+    },
     "comment": {
         "name": "comment.line.jasmin",
         "match": "(?<=^|[ \t]);.*"
@@ -161,6 +182,7 @@
     { "include": "#implements-def" },
     { "include": "#method-def" },
     { "include": "#field-def" },
+    { "include": "#var-def" },
     { "include": "#comment" },
     { "include": "#directive" },
     { "include": "#modifier" },
