@@ -1,6 +1,6 @@
 # jasmin-sublime
 
-[Jasmin](http://jasmin.sourceforge.net/) JVM Assembler for Sublime Text 
+[Jasmin JVM Assembler](http://jasmin.sourceforge.net/) for Sublime Text 
 
 ## install manually
 
