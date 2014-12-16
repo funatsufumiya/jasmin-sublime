@@ -23,3 +23,7 @@ git clone https://github.com/atmarksharp/jasmin-sublime Jasmin
 cd ~/Library/Application Support/Sublime Text 3/Packages
 git clone https://github.com/atmarksharp/jasmin-sublime Jasmin
 ```
+
+## License
+
+[MIT License](http://choosealicense.com/licenses/mit/)
