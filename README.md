@@ -4,6 +4,8 @@
 
 ## Install with Package Control
 
+[Jasmin JVM Assembler - Package Control](https://sublime.wbond.net/packages/Jasmin%20JVM%20Assembler)
+
 ***Ctrl + Shift + P*** ` ==> ` **[Install Package]** ` ==> ` **[Jasmin JVM Assembler]**
 
 ## Install manually
