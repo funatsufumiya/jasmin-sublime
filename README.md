@@ -2,7 +2,11 @@
 
 [Jasmin JVM Assembler](http://jasmin.sourceforge.net/) for Sublime Text 
 
-## install manually
+## Install with Package Control
+
+***Ctrl + Shift + P*** ` ==> ` **[Install Package]** ` ==> ` **[Jasmin JVM Assembler]**
+
+## Install manually
 
 ### Sublime Text 2
 
